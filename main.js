@@ -142,6 +142,8 @@ newGameButton.addEventListener("click",function(){
   sudokuSolved = stringToArray(solvedString);
   setupBoard();
   fillBoard(sudokuBoard);
+  hintNumber =3;
+  hints.innerHTML ="3/3";
   mistake = 0;
   mistakeElement.innerHTML = "0/3";
 });
