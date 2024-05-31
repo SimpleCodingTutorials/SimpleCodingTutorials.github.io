@@ -160,7 +160,7 @@ function resetBoard() {
 
 
 window.onloadTurnstileCallback = function () {
-  turnstile.render('#example-container', {
+  turnstile.render('#myWidget', {
       sitekey: '0x4AAAAAAAbmRHn2zlsjpHHq',
       callback: function(token) {
           console.log(`Challenge Success ${token}`);
