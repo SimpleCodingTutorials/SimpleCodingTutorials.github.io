@@ -147,6 +147,16 @@
 
 
 <div id="alert"></div>
+<script>
+  document.addEventListener('cf.captcha.ready', function (event) {
+    const captcha = event.detail.api;
+    captcha.on('verify', function (token) {
+      // Handle the CAPTCHA token (send it to the server for validation if needed)
+      console.log('CAPTCHA token:', token);
+      // Proceed with your desired action (e.g., form submission)
+    });
+  });
+</script>
 
    <script src="main.js"></script> 
 </body>
