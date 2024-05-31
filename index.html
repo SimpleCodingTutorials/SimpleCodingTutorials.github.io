@@ -15,16 +15,26 @@
 
 <body>
   <script>
-    document.addEventListener('cf.captcha.ready', function (event) {
-      console.log('triggered:');
-  
-      const captcha = event.detail.api;
-      captcha.on('verify', function (token) {
-        // Handle the CAPTCHA token (send it to the server for validation if needed)
-        console.log('CAPTCHA token:', token);
-        // Proceed with your desired action (e.g., form submission)
-      });
-    });
+    // Function to handle CAPTCHA success
+    function onTurnstileSuccess(token) {
+            // Enable the action button
+            console.log("CAPTCHA succeeded, token:", token);
+        }
+
+        // Function to handle CAPTCHA error
+        function onTurnstileError() {
+            console.log("CAPTCHA error, please try again.");
+        }
+
+        // Function to handle CAPTCHA expiration
+        function onTurnstileExpired() {
+            console.log("CAPTCHA expired, please complete again.");
+        }
+
+        // Function to perform the desired action
+        document.getElementById('actionBtn').addEventListener('click', function() {
+            alert('Action performed!');
+        });
   </script>
   <div class="container">
     <div id="gameBoard">
@@ -155,7 +165,7 @@
         </div>
       </div>
   </div>
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAAAbmRHn2zlsjpHHq1"></div>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAAbmRHn2zlsjpHHq"></div>
 
 
 <div id="alert"></div>
