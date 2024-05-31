@@ -165,7 +165,7 @@ window.onloadTurnstileCallback = function () {
       callback: function(token) {
           console.log(`Challenge Success ${token}`);
           document.querySelector(".container").style.display = "flex";
-          document.getElementById("mywidget").style.display = "none";
+          document.getElementById("myWidget").style.display = "none";
       },
   });
 };
