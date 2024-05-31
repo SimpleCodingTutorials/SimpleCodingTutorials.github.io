@@ -157,10 +157,10 @@ function resetBoard() {
   }
 }
 
-
+//0x4AAAAAAAbmRHn2zlsjpHHq
 window.onloadTurnstileCallback = function () {
   turnstile.render('#myWidget', {
-      sitekey: '0x4AAAAAAAbmRHn2zlsjpHHq1',
+      sitekey: '941999',
       callback: function(token) {
           console.log(`Challenge Success ${token}`);
           setTimeout(()=>{
