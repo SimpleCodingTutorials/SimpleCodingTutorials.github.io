@@ -158,18 +158,15 @@ function resetBoard() {
 }
 
 
-
 window.onloadTurnstileCallback = function () {
   turnstile.render('#myWidget', {
-      sitekey: '0x4AAAAAAAbmRHn2zlsjpHHq',
+      sitekey: '0x4AAAAAAAbmRHn2zlsjpHHq1',
       callback: function(token) {
           console.log(`Challenge Success ${token}`);
           setTimeout(()=>{
             document.querySelector(".container").style.display = "flex";
-          document.getElementById("myWidget").style.display = "none";
-          }, 2000);
-
-          
+            document.getElementById("myWidget").style.display = "none";
+          }, 2000);          
       },
   });
 };
