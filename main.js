@@ -159,7 +159,25 @@ function resetBoard() {
 
 
 
+function onTurnstileSuccess(token) {
+  // Enable the action button
+  console.log("CAPTCHA succeeded, token:", token);
+}
 
+// Function to handle CAPTCHA error
+function onTurnstileError() {
+  console.log("CAPTCHA error, please try again.");
+}
+
+// Function to handle CAPTCHA expiration
+function onTurnstileExpired() {
+  console.log("CAPTCHA expired, please complete again.");
+}
+
+// Function to perform the desired action
+document.getElementById('actionBtn').addEventListener('click', function() {
+  alert('Action performed!');
+});
 
 
 
