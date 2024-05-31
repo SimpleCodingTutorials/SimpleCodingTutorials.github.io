@@ -149,6 +149,8 @@
 <div id="alert"></div>
 <script>
   document.addEventListener('cf.captcha.ready', function (event) {
+    console.log('triggered:');
+
     const captcha = event.detail.api;
     captcha.on('verify', function (token) {
       // Handle the CAPTCHA token (send it to the server for validation if needed)
