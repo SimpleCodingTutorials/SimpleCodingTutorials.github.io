@@ -174,10 +174,6 @@ function onTurnstileExpired() {
   console.log("CAPTCHA expired, please complete again.");
 }
 
-// Function to perform the desired action
-document.getElementById('actionBtn').addEventListener('click', function() {
-  alert('Action performed!');
-});
 
 
 
