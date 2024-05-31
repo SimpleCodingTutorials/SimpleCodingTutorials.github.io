@@ -164,8 +164,12 @@ window.onloadTurnstileCallback = function () {
       sitekey: '0x4AAAAAAAbmRHn2zlsjpHHq',
       callback: function(token) {
           console.log(`Challenge Success ${token}`);
-          document.querySelector(".container").style.display = "flex";
+          setTimeout(()=>{
+            document.querySelector(".container").style.display = "flex";
           document.getElementById("myWidget").style.display = "none";
+          }, 2000);
+
+          
       },
   });
 };
