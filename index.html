@@ -9,7 +9,18 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="fontawesome/css/all.css" />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async="" defer=""></script>
-
+  <script>
+    document.addEventListener('cf.captcha.ready', function (event) {
+      console.log('triggered:');
+  
+      const captcha = event.detail.api;
+      captcha.on('verify', function (token) {
+        // Handle the CAPTCHA token (send it to the server for validation if needed)
+        console.log('CAPTCHA token:', token);
+        // Proceed with your desired action (e.g., form submission)
+      });
+    });
+  </script>
   <script src="sudoku.js"></script>
 </head>
 
@@ -147,18 +158,7 @@
 
 
 <div id="alert"></div>
-<script>
-  document.addEventListener('cf.captcha.ready', function (event) {
-    console.log('triggered:');
 
-    const captcha = event.detail.api;
-    captcha.on('verify', function (token) {
-      // Handle the CAPTCHA token (send it to the server for validation if needed)
-      console.log('CAPTCHA token:', token);
-      // Proceed with your desired action (e.g., form submission)
-    });
-  });
-</script>
 
    <script src="main.js"></script> 
 </body>
