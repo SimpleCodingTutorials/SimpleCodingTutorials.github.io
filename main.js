@@ -159,20 +159,14 @@ function resetBoard() {
 
 
 
-function onTurnstileSuccess(token) {
-  // Enable the action button
-  console.log("CAPTCHA succeeded, token:", token);
-}
-
-// Function to handle CAPTCHA error
-function onTurnstileError() {
-  console.log("CAPTCHA error, please try again.");
-}
-
-// Function to handle CAPTCHA expiration
-function onTurnstileExpired() {
-  console.log("CAPTCHA expired, please complete again.");
-}
+window.onloadTurnstileCallback = function () {
+  turnstile.render('#example-container', {
+      sitekey: '0x4AAAAAAAbmRHn2zlsjpHHq',
+      callback: function(token) {
+          console.log(`Challenge Success ${token}`);
+      },
+  });
+};
 
 
 
