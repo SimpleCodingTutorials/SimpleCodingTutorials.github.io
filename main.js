@@ -157,19 +157,19 @@ function resetBoard() {
   }
 }
 
-//0x4AAAAAAAbmRHn2zlsjpHHq
 window.onloadTurnstileCallback = function () {
   turnstile.render('#myWidget', {
-      sitekey: '0x4AAAAAAAbmRHn2zlsjpHHq',
+      sitekey: '0x4AAAAAAAbqGgQ1sHhLWdrs',
       callback: function(token) {
           console.log(`Challenge Success ${token}`);
-          setTimeout(()=>{
+          setTimeout(() => {
             document.querySelector(".container").style.display = "flex";
             document.getElementById("myWidget").style.display = "none";
-          }, 2000);          
+          }, 2000);
       },
   });
 };
+
 
 
 
