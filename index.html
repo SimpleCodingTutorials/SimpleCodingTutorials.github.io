@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="fontawesome/css/all.css" />
   <script src="sudoku.js"></script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -147,18 +147,19 @@
       </div>
   </div>
 
-<!-- <div id="myWidget"></div> -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <div class="g-recaptcha" data-sitekey="6Lcmt2kqAAAAAOR_P0YWtQH136Ki2orD-r7mcVbL" data-callback="onRecaptchaSuccess"></div>
 
-
-<div class="g-recaptcha" 
-         data-sitekey="6Lcmt2kqAAAAAOR_P0YWtQH136Ki2orD-r7mcVbL" 
-         data-callback="onRecaptchaSuccess">
-    </div>
+    
 <div id="alert"></div>
-
 
    <script src="main.js"></script> 
 </body>
 
 </html>
+
+
+
+
+
+
+
