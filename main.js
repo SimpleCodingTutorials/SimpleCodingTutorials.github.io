@@ -170,6 +170,10 @@ function resetBoard() {
 //   });
 // };
 
+function onSubmit(token) {
+  document.getElementById("myform").submit();
+}
+
 
 
 
