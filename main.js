@@ -172,7 +172,10 @@ function resetBoard() {
 
 function onRecaptchaSuccess() {
   // Make the container visible
-  document.querySelector('.container').style.display = 'flex';
+  setTimeout(() => {
+                document.querySelector(".container").style.display = "flex";
+                document.querySelector(".g-recaptcha").style.display = "none";
+              }, 2000);
 }
 
 
