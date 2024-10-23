@@ -170,10 +170,15 @@ function resetBoard() {
 //   });
 // };
 
-function onSubmit(token) {
-  document.getElementById("myform").submit();
-}
-
+// function onSubmit(token) {
+//   document.getElementById("myform").submit();
+// }
+var onloadCallback = function() {
+  setTimeout(() => {
+                document.querySelector(".container").style.display = "flex";
+                document.getElementById("myform").style.display = "none";
+              }, 2000);
+};
 
 
 
