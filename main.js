@@ -170,19 +170,10 @@ function resetBoard() {
 //   });
 // };
 
-function onSubmit(token) {
-  setTimeout(() => {
-    document.querySelector(".container").style.display = "flex";
-    document.getElementById("myform").style.display = "none";
-  }, 2000);
+function onRecaptchaSuccess() {
+  // Make the container visible
+  document.querySelector('.container').style.display = 'flex';
 }
-var onloadCallback = function() {
-  setTimeout(() => {
-                document.querySelector(".container").style.display = "flex";
-                document.getElementById("myform").style.display = "none";
-              }, 2000);
-};
-
 
 
 
